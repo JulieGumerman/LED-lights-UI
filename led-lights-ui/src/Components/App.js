@@ -8,30 +8,34 @@ import Chase from "./Chase";
 
 function App() {
 
-  const [onOff, setOnOff] = useState(false)
-// const onAndOff () {
-//   axios.get("")
-//   .then(res => console.log(res))
-//   .catch(err => console.log(error))
-// }
+  const [onOff, setOnOff] = useState(true)
+  const [setMode, setSetMode] = useState({})
 
-  // const rainbowLights = () => {
-  //   axios.get("")
-  //   .then(res => console.log(res))
-  //   .catch(err => console.log(err))
-  // }
+  useEffect(() => { setOnOff(false)}, [])
 
-  // const streak = () => {
-  //   axios.get("")
-  //   .then(res => console.log(res))
-  //   .catch(err => console.log(err))
-  // }
+  const onChange = (e) => {
+    const {name, value} = e.target
+    setSetMode({...setMode, [name]:value})
+  }
 
-  // const chase = () => {
-  //   axios.get("")
-  //   .then(res => console.log(res))
-  //   .catch(err => console.log(err))
-  // }
+  const onAndOff = () => {
+    if (onOff == true) {
+      setOnOff(false)
+    } else {
+      setOnOff(true)
+    }
+    console.log("on/off state", onOff)
+    // axios.get("")
+    // .then(res => console.log(res))
+    // .catch(err => console.log(error))
+  }
+
+  const setMode = () => {
+    // axios.post("http://{{URL}}:{{PORT}}/set_mode", setMode)
+    // .then(res => console.log(res))
+    // .catch(err => console.log(err))
+  }
+
 
   return (
     <div>
@@ -39,7 +43,7 @@ function App() {
         <h1>Splat's freaking awesome LED Lights UI</h1>
       </div>
       <div>
-        <OnOff />
+        <OnOff onAndOff={onAndOff}/>
         <SetMode />
 
       </div>
