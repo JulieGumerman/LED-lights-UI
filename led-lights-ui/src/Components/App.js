@@ -31,7 +31,7 @@ function App() {
     // .catch(err => console.log(error))
   }
 
-  const setMode = () => {
+  const myMode = () => {
     // axios.post("http://{{URL}}:{{PORT}}/set_mode", setMode)
     // .then(res => console.log(res))
     // .catch(err => console.log(err))
