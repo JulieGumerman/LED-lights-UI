@@ -10,6 +10,7 @@ function App() {
 
   const [onOff, setOnOff] = useState(true)
   const [setMode, setSetMode] = useState({})
+  const [currentMode, setCurrentMode] = useState('')
 
   useEffect(() => { setOnOff(false)}, [])
 
@@ -44,7 +45,7 @@ function App() {
       </div>
       <div>
         <OnOff onAndOff={onAndOff}/>
-        <SetMode />
+        <SetMode currentMode={currentMode} setCurrentMode={setCurrentMode}/>
 
       </div>
       <Rainbow />
