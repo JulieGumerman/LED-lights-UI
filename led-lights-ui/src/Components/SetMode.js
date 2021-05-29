@@ -2,9 +2,9 @@ function SetMode ({handleChange}) {
 
 
     return (
-        <div>
+        <div className="stack">
         <label for="setMode">Set Mode</label>
-        <select name="mode" onChange={e => handleChange(e)}>
+        <select name="mode" onChange={e => handleChange(e)} className="inputs">
             <option
                 value="none"
                 defaultValue
