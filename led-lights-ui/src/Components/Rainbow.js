@@ -1,9 +1,20 @@
-function Rainbow () {
+function Rainbow ({handleChange}) {
+    const min=1
+    const max=100
+    const happyMedium=50
     return (
         <div>
         <h2>Rainbow</h2>
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
+        <div className="slidecontainer">
+          <input 
+            onChange={e => handleChange(e)}
+            type="range" 
+            min={min}
+            max={max}
+            value={happyMedium}
+            name="Rate"
+            className="slider" 
+          id="myRange" />
         </div>
       </div>
     );
