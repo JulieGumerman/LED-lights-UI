@@ -78,7 +78,8 @@ button {
 }
 
 .box-of-donuts {
-  border: red 3px solid;
+  align-items: flex-start;
+  justify-content: center;
 
   @media screen and (min-width: 720px) {
     display: flex;
@@ -87,7 +88,6 @@ button {
   }
 
   .donut {
-    border: green 1px solid;
     @media screen and (min-width: 720px) {
       width: 45%;
     }

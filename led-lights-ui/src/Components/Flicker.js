@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { Donut } from 'react-dial-knob';
+import { Slider, Handles, Tracks } from 'react-compound-slider';
+
 function Flicker ({handleChange}) {
     const [colorCountValue, setColorCountValue] = useState(1);
     const [boostRateValue, setBoostRateValue] = useState(1);
@@ -22,11 +24,11 @@ function Flicker ({handleChange}) {
                     ariaLabelledBy={'my-label'}
                 >
                     <label id={'my-label'}>Color count</label>
+                    <p>sets the number of colors to use from the palette</p>
                 </Donut>
                 </div>
 
                 <div className="donut">
-                // “boost_rate”, [int] - frequency at which boosting occurs, value can be between 1 and 16
                 <Donut
                 diameter={200}
                 min={1}
@@ -40,10 +42,10 @@ function Flicker ({handleChange}) {
                 ariaLabelledBy={'my-label'}
             >
                 <label id={'my-label'}>Boost Rate</label>
+                <p>frequency at which boosting occurs</p>
             </Donut>
                 </div>
                 <div className="donut">
-                // “seed_amt”, [int] - number of “sparks” to seed the array
                 <Donut
                 diameter={200}
                 min={1}
@@ -57,11 +59,11 @@ function Flicker ({handleChange}) {
                 ariaLabelledBy={'my-label'}
             >
                 <label id={'my-label'}>Seed Amount</label>
+                <p>number of “sparks” to seed the array</p>
             </Donut>
             </div>
             
             <div className="donut">
-                // “fade_rate”, [int] - decay rate of the lit LEDs on the array, value can be between 1 and 16 
                 <Donut
                     diameter={200}
                     min={1}
@@ -75,6 +77,7 @@ function Flicker ({handleChange}) {
                     ariaLabelledBy={'my-label'}
                 >
                     <label id={'my-label'}>Fade Rate</label>
+                    <p>decay rate of the lit LEDs on the array</p>
                 </Donut>
             </div>
         </div>
