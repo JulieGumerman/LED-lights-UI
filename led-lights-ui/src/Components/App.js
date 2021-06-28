@@ -18,7 +18,7 @@ function App() {
   const handleChange = (e) => {
     const {name, value} = e.target
     
-    name=="mode" ? setSetMode({[name]: value}) : setSetMode({...setMode, [name]:value})
+    name=="mode" ? setSetMode({[name]: value}) : setSetMode({...setMode, [name]:parseInt(value)})
 
     console.log(setMode)
   }
@@ -59,9 +59,9 @@ function App() {
       </div>
         <div>
           {setMode.mode=="rainbow" ? <Rainbow handleChange={handleChange} setMode={setMode}/> : null}
-          {setMode.mode=="streak" ? <Streak handleChange={handleChange}/>: null}
-          {setMode.mode=="chase" ? <Chase handleChange={handleChange}/> : null}
-          {setMode.mode=="flicker" ? <Flicker handleChange={handleChange}/> : null}
+          {setMode.mode=="streak" ? <Streak handleChange={handleChange} setMode={setMode}/>: null}
+          {setMode.mode=="chase" ? <Chase handleChange={handleChange} setMode={setMode}/> : null}
+          {setMode.mode=="flicker" ? <Flicker handleChange={handleChange} setMode={setMode}/> : null}
           {setMode.mode=="none" ? null :     <button type="submit">Do I work?</button>}
 
         </div>

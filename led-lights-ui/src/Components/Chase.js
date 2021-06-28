@@ -10,7 +10,15 @@ function Chase ({handleChange}) {
         </ul>
         <label for="twinkle">Twinkle</label>
           <div className="slidecontainer">
-      <input name="twinkle" type="range" min="1" max="255" value="50" className="slider" id="myHue" onChange={e => handleChange(e)}/>
+      <input 
+        name="twinkle" 
+        type="range" 
+        min="1" 
+        max="255" 
+        value="50" 
+        className="slider" 
+        id="myHue" 
+        onChange={e => handleChange(e)}/>
     </div>
           <label for="boost">Boost</label>
           <div className="slidecontainer">

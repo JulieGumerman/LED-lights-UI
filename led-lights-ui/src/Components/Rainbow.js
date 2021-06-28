@@ -9,7 +9,7 @@ function Rainbow ({handleChange, setMode}) {
             type="range" 
             min="1"
             max="100"
-            value={setMode.Rate ? setMode.Rate : setMode.Rate = 50}
+            value={setMode.Rate ? parseInt(setMode.Rate) : setMode.Rate = 50}
             name="Rate"
             className="slider" 
           id="myRange" />
