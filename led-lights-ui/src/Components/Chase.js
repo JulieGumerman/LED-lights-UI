@@ -1,4 +1,4 @@
-function Chase ({handleChange}) {
+function Chase ({handleChange, setMode}) {
     return (
         <div>
         <h2>Chase</h2>
@@ -15,14 +15,22 @@ function Chase ({handleChange}) {
         type="range" 
         min="1" 
         max="255" 
-        value="50" 
+        value={setMode.twinkle ? parseInt(setMode.twinkle) : setMode.twinkle = 50}
         className="slider" 
         id="myHue" 
         onChange={e => handleChange(e)}/>
     </div>
           <label for="boost">Boost</label>
           <div className="slidecontainer">
-      <input name="boost" type="range" min="0" max="255" value="50" className="slider" id="myRate" onChange={e => handleChange(e)} />
+      <input 
+        name="boost" 
+        type="range" 
+        min="0" 
+        max="255" 
+        value={setMode.boost ? parseInt(setMode.boost) : setMode.boost = 50}
+        className="slider" 
+        id="myRate" 
+        onChange={e => handleChange(e)} />
     </div>
       </div>
     )

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Donut } from 'react-dial-knob';
 import { Slider, Handles, Tracks } from 'react-compound-slider';
 
-function Flicker ({handleChange}) {
+function Flicker ({handleChange, setMode}) {
     const [colorCountValue, setColorCountValue] = useState(1);
     const [boostRateValue, setBoostRateValue] = useState(1);
     const [seedAmtValue, setSeedAmtValue] = useState(1);
@@ -26,6 +26,22 @@ function Flicker ({handleChange}) {
                     <label id={'my-label'}>Color count</label>
                     <p>sets the number of colors to use from the palette</p>
                 </Donut>
+                {/* <Donut
+                    diameter={200}
+                    min={1}
+                    max={16}
+                    step={1}
+                    name="color_count"
+                    value={setMode.color_count ? parseInt(setMode.color_count) : setMode.hue = 5}
+                    theme={{
+                        donutColor: 'blue'
+                    }}
+                    onValueChange={e => handleChange(e)}
+                    ariaLabelledBy={'my-label'}
+                >
+                    <label id={'my-label'}>Color count</label>
+                    <p>sets the number of colors to use from the palette</p>
+                </Donut> */}
                 </div>
 
                 <div className="donut">
