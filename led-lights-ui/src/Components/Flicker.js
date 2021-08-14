@@ -11,96 +11,91 @@ function Flicker ({handleChange, setMode}) {
         <div>
             <div className="box-of-donuts">
                 <div className="donut">
-                <Donut
-                    diameter={200}
-                    min={1}
-                    max={16}
-                    step={1}
-                    value={colorCountValue}
-                    theme={{
-                        donutColor: 'blue'
-                    }}
-                    onValueChange={setColorCountValue}
-                    ariaLabelledBy={'my-label'}
-                >
+                <input 
+                    name="color_count" 
+                    type="range" 
+                    min="1" 
+                    max="16" 
+                    value={setMode.color_count}
+                    className="slider" 
+                    id="myHue" 
+                    onChange={e => handleChange(e)}/>
                     <label id={'my-label'}>Color count</label>
                     <p>sets the number of colors to use from the palette</p>
-                </Donut>
-                {/* <Donut
-                    diameter={200}
-                    min={1}
-                    max={16}
-                    step={1}
-                    name="color_count"
-                    value={setMode.color_count ? parseInt(setMode.color_count) : setMode.hue = 5}
-                    theme={{
-                        donutColor: 'blue'
-                    }}
-                    onValueChange={e => handleChange(e)}
-                    ariaLabelledBy={'my-label'}
-                >
-                    <label id={'my-label'}>Color count</label>
-                    <p>sets the number of colors to use from the palette</p>
-                </Donut> */}
                 </div>
-
                 <div className="donut">
-                <Donut
-                diameter={200}
-                min={1}
-                max={16}
-                step={1}
-                value={boostRateValue}
-                theme={{
-                    donutColor: 'blue'
-                }}
-                onValueChange={setBoostRateValue}
-                ariaLabelledBy={'my-label'}
-            >
+                <input 
+                    name="max_iter" 
+                    type="range" 
+                    min="1" 
+                    max="10000" 
+                    value={setMode.max_iter}
+                    className="slider" 
+                    id="myHue" 
+                    onChange={e => handleChange(e)}/>
+                    <label id={'my-label'}>Maximum Iterations</label>
+                    <p>number of iterations/frames to render before resetting the palette</p>
+                </div>
+                <div className="box-of-donuts">
+                <div className="donut">
+                <input 
+                    name="boost_thr" 
+                    type="range" 
+                    min="1" 
+                    max="16" 
+                    value={setMode.boost_thr}
+                    className="slider" 
+                    id="myHue" 
+                    onChange={e => handleChange(e)}/>
+                    <label id={'my-label'}>Boost_thr</label>
+                    <p>Number of LEDs to to boost intermittently</p>
+                </div>
+                <div className="donut">
+                <input 
+        name="boost_rate" 
+        type="range" 
+        min="1" 
+        max="16" 
+        value={setMode.boost_rate}
+        className="slider" 
+        id="myHue" 
+        onChange={e => handleChange(e)}/>
+
                 <label id={'my-label'}>Boost Rate</label>
                 <p>frequency at which boosting occurs</p>
-            </Donut>
+
                 </div>
                 <div className="donut">
-                <Donut
-                diameter={200}
-                min={1}
-                max={16}
-                step={1}
-                value={seedAmtValue}
-                theme={{
-                    donutColor: 'blue'
-                }}
-                onValueChange={setSeedAmtValue}
-                ariaLabelledBy={'my-label'}
-            >
+                <input 
+        name="twinkle" 
+        type="range" 
+        min="1" 
+        max="255" 
+        value={setMode.twinkle ? parseInt(setMode.twinkle) : setMode.twinkle = 50}
+        className="slider" 
+        id="myHue" 
+        onChange={e => handleChange(e)}/>
+
                 <label id={'my-label'}>Seed Amount</label>
                 <p>number of “sparks” to seed the array</p>
-            </Donut>
+
             </div>
             
             <div className="donut">
-                <Donut
-                    diameter={200}
-                    min={1}
-                    max={16}
-                    step={1}
-                    value={fadeRateValue}
-                    theme={{
-                        donutColor: 'blue'
-                    }}
-                    onValueChange={setFadeRateValue}
-                    ariaLabelledBy={'my-label'}
-                >
+            <input 
+        name="fade_rate" 
+        type="range" 
+        min="1" 
+        max="16" 
+        value={setMode.fade_rate}
+        className="slider" 
+        id="myHue" 
+        onChange={e => handleChange(e)}/>
                     <label id={'my-label'}>Fade Rate</label>
                     <p>decay rate of the lit LEDs on the array</p>
-                </Donut>
             </div>
         </div>
-        {/* // “max_iter”, [int] - number of iterations/frames to render before resetting the palette - can be between 1 and 100000 (arbitrarily large)
-        // “twink_min”, [int] - minimum number of LEDs to fade
-        // “twink_max”, [int] - maximum number of LEDs to fade
-        // “boost_thr”, [int] - number of LEDs to boost intermittently*/}
+        </div>
         </div>
     );
 }
