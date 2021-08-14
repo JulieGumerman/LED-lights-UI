@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import { Donut } from 'react-dial-knob';
-import { Slider, Handles, Tracks } from 'react-compound-slider';
+
 
 function Flicker ({handleChange, setMode}) {
     const [colorCountValue, setColorCountValue] = useState(1);
@@ -36,6 +35,13 @@ function Flicker ({handleChange, setMode}) {
                     <label id={'my-label'}>Maximum Iterations</label>
                     <p>number of iterations/frames to render before resetting the palette</p>
                 </div>
+                <div className="donut">
+                <div class='wrap'>
+  <input name="min-iter" id='a' type='range' min='1' value={setMode.twink_min} max='10000' onChange={e => handleChange(e)}/>
+  <input name="max-iter" id='b' type='range' min='-50' value={setMode.twink_max} max='50' onChange={e => handleChange(e)}/>
+</div>
+<label id={'my-label'}>Max and min</label>
+</div>
                 <div className="box-of-donuts">
                 <div className="donut">
                 <input 
