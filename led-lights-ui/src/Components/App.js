@@ -62,7 +62,7 @@ function App() {
           {setMode.mode=="streak" ? <Streak handleChange={handleChange} setMode={setMode}/>: null}
           {setMode.mode=="chase" ? <Chase handleChange={handleChange} setMode={setMode}/> : null}
           {setMode.mode=="flicker" ? <Flicker handleChange={handleChange} setMode={setMode}/> : null}
-          {setMode.mode=="none" ? null :     <button type="submit">Do I work?</button>}
+          {setMode.mode=="none" ? null :     <button type="submit" >Set LED Light Pattern</button>}
 
         </div>
 

@@ -61,16 +61,26 @@ h1 {
   /* font-weight: 800; */
   -webkit-font-smoothing: antialiased;
 }
+h2 {
+  color: lightseagreen;
+}
 
 label {
   color: lightseagreen;
 }
 
+p {
+  color: lightseagreen;
+}
 .stack {
   display: flex;
   flex-direction: column
 }
 
+button {
+  background-color: lightseagreen;
+  font-size: 20px;
+}
 .inputs {
 @include inputbasics
 
