@@ -48,7 +48,7 @@ function App() {
   return (
     <div>
       <div>
-        <h1>Splat's freaking awesome LED Lights UI</h1>
+        <h1>Redcloud UI</h1>
       </div>
       <form onSubmit={handleSubmit}>
       <div>

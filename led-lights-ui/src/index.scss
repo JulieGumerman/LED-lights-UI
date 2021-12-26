@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: black; */
-  background: #a9b1b1;
+  background: black;
 
   padding: 10px;
   @media (min-width: 560px) {
@@ -46,20 +46,24 @@ code {
 }
 
 h1 {
-
+  color: lightseagreen;
   font-family: 'Audiowide', cursive;
   /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgSYHWcCwS7GtpEuN_wkC1ZYng04SO9qQjSw&usqp=CAU"); */
-  background-image: url("https://wallpapercave.com/wp/wp7153972.jpg");
-  background-repeat: repeat;
+  // background-image: url("https://wallpapercave.com/wp/wp7153972.jpg");
+  // background-repeat: repeat;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // -webkit-text-fill-color: transparent;
   margin-top: 200px;
   /* font-size: 120px; */
-  text-align: center;
+  // text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   /* font-weight: 800; */
   -webkit-font-smoothing: antialiased;
+}
+
+label {
+  color: lightseagreen;
 }
 
 .stack {
